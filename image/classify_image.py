@@ -68,16 +68,18 @@ def main():
   print('----INFERENCE TIME----')
   print('Note: The first inference on Edge TPU is slow because it includes',
         'loading the model into Edge TPU memory.')
-  for _ in range(args.count):
-    start = time.perf_counter()
-    interpreter.invoke()
-    inference_time = time.perf_counter() - start
-    classes = classify.get_classes(interpreter, args.top_k, args.threshold)
-    print('%.1fms' % (inference_time * 1000))
+  while True:
+    for _ in range(args.count):
+        start = time.perf_counter()
+        interpreter.invoke()
+        inference_time = time.perf_counter() - start
+        classes = classify.get_classes(interpreter, args.top_k, args.threshold)
+        print('%.1fms' % (inference_time * 1000))
 
-  print('-------RESULTS--------')
-  for c in classes:
-    print('%s: %.5f' % (labels.get(c.id, c.id), c.score))
+
+    print('-------RESULTS--------')
+    for c in classes:
+        print('%s: %.5f' % (labels.get(c.id, c.id), c.score))
 
 
 if __name__ == '__main__':
