@@ -37,7 +37,19 @@ from pycoral.adapters import classify
 from pycoral.adapters import common
 from pycoral.utils.dataset import read_label_file
 from pycoral.utils.edgetpu import make_interpreter
+import pyaudio
+import wave
+import librosa
+import librosa.display
 
+CHUNK = 1024
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 16000
+RECORD_SECONDS = 2
+WAVE_OUTPUT_FILENAME = "output.wav"
+
+p = pyaudio.PyAudio()
 
 def main():
   parser = argparse.ArgumentParser(
@@ -68,8 +80,43 @@ def main():
   print('----INFERENCE TIME----')
   print('Note: The first inference on Edge TPU is slow because it includes',
         'loading the model into Edge TPU memory.')
+
+  stream = p.open(format=FORMAT,
+                  channels=CHANNELS,
+                  rate=RATE,
+                  input=True,
+                  frames_per_buffer=CHUNK)
+
   while True:
-    for _ in range(args.count):
+
+    frames = []
+
+    for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+        data = stream.read(CHUNK)
+        frames.append(data)
+
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+
+    wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+    wf.setnchannels(CHANNELS)
+    wf.setsampwidth(p.get_sample_size(FORMAT))
+    wf.setframerate(RATE)
+    wf.writeframes(b''.join(frames))
+    wf.close()
+
+    y, sr = librosa.load('output.wav', mono=True, duration=2)
+    plt.subplots_adjust(left=0, right=1, bottom=0, top=1)
+    plt.specgram(y, NFFT=1024, Fs=2, Fc=0, noverlap=128, sides='default', mode='default', scale='dB');
+    plt.axis('off');
+    plt.savefig('output.png', frameon='false')
+    plt.clf()
+
+    image = Image.open('output.png').convert('RGB').resize(size, Image.ANTIALIAS)
+    common.set_input(interpreter, image)
+
+    for _ in range(3):
         start = time.perf_counter()
         interpreter.invoke()
         inference_time = time.perf_counter() - start
