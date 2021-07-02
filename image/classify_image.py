@@ -126,7 +126,7 @@ def main():
     plt.clf()
 
     image = Image.open('output.png').convert('RGB').resize(size, Image.ANTIALIAS)
-    common.set_input(interpreter, image)
+    common.set_input(image) #common.set_input(interpreter, image)
 
     for _ in range(3):
         start = time.perf_counter()
