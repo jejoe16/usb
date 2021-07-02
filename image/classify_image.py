@@ -40,7 +40,7 @@ from pycoral.utils.edgetpu import make_interpreter
 import pyaudio
 import wave
 from scipy.io import wavfile
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 CHUNK = 1024
