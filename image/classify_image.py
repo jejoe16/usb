@@ -32,7 +32,7 @@ python3 examples/classify_image.py \
 import argparse
 import time
 
-from PIL import Image
+from PIL import Image ## ERROR IN 8.3.0 downgrade to 8.2.0
 from pycoral.adapters import classify
 from pycoral.adapters import common
 from pycoral.utils.dataset import read_label_file
@@ -46,7 +46,7 @@ import matplotlib.pyplot as plt
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
-RATE = 16000
+RATE = 48000
 RECORD_SECONDS = 2
 WAVE_OUTPUT_FILENAME = "output.wav"
 
@@ -101,13 +101,13 @@ def main():
 
     frames = []
 
+    stream.start_stream()
+
     for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
         data = stream.read(CHUNK)
         frames.append(data)
 
     stream.stop_stream()
-    stream.close()
-    p.terminate()
 
     wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
     wf.setnchannels(CHANNELS)
@@ -118,17 +118,17 @@ def main():
 
     sr, y = wavfile.read('output.wav')
 
-    #y, sr = librosa.load('output.wav', mono=True, duration=2)
     plt.subplots_adjust(left=0, right=1, bottom=0, top=1)
     plt.specgram(y, NFFT=1024, Fs=2, Fc=0, noverlap=128, sides='default', mode='default', scale='dB');
     plt.axis('off');
     plt.savefig('output.png', frameon='false')
     plt.clf()
 
+    size = common.input_size(interpreter)
     image = Image.open('output.png').convert('RGB').resize(size, Image.ANTIALIAS)
-    common.set_input(image) #common.set_input(interpreter, image)
+    common.set_input(interpreter, image) #common.set_input(interpreter, image)
 
-    for _ in range(3):
+    for _ in range(6):
         start = time.perf_counter()
         interpreter.invoke()
         inference_time = time.perf_counter() - start
