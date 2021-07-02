@@ -39,8 +39,8 @@ from pycoral.utils.dataset import read_label_file
 from pycoral.utils.edgetpu import make_interpreter
 import pyaudio
 import wave
-import librosa
-import librosa.display
+from scipy.io import wavfile
+
 
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
@@ -106,7 +106,9 @@ def main():
     wf.writeframes(b''.join(frames))
     wf.close()
 
-    y, sr = librosa.load('output.wav', mono=True, duration=2)
+    sr, y = wavfile.read('output.wav')
+
+    #y, sr = librosa.load('output.wav', mono=True, duration=2)
     plt.subplots_adjust(left=0, right=1, bottom=0, top=1)
     plt.specgram(y, NFFT=1024, Fs=2, Fc=0, noverlap=128, sides='default', mode='default', scale='dB');
     plt.axis('off');
