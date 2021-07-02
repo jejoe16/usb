@@ -91,6 +91,7 @@ def main():
 
   stream = p.open(format=FORMAT,
                   channels=CHANNELS,
+                  input_device_index=0,
                   rate=RATE,
                   input=True,
                   frames_per_buffer=CHUNK)
