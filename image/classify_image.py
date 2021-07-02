@@ -52,6 +52,14 @@ WAVE_OUTPUT_FILENAME = "output.wav"
 p = pyaudio.PyAudio()
 
 def main():
+  info = p.get_host_api_info_by_index(0)
+  numdevices = info.get('deviceCount')
+  for i in range(0, numdevices):
+    if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
+        print
+        "Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name')
+
+
   parser = argparse.ArgumentParser(
       formatter_class=argparse.ArgumentDefaultsHelpFormatter)
   parser.add_argument('-m', '--model', required=True,
@@ -74,8 +82,8 @@ def main():
   interpreter.allocate_tensors()
 
   size = common.input_size(interpreter)
-  image = Image.open(args.input).convert('RGB').resize(size, Image.ANTIALIAS)
-  common.set_input(interpreter, image)
+ # image = Image.open(args.input).convert('RGB').resize(size, Image.ANTIALIAS)
+ # common.set_input(interpreter, image)
 
   print('----INFERENCE TIME----')
   print('Note: The first inference on Edge TPU is slow because it includes',
