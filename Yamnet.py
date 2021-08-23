@@ -12,7 +12,7 @@ def main():
 
     # Specify the TensorFlow model, labels, and image
     script_dir = pathlib.Path(__file__).parent.absolute()
-    model_file = os.path.join(script_dir, 'lite-model_yamnet_classification_tflite1.tflite')
+    model_file = os.path.join(script_dir, 'lite-model_yamnet_classification_tflite.tflite')
     label_file = os.path.join(script_dir, 'AudioLabels.txt')
     image_file = os.path.join(script_dir, 'test1.png')
 
@@ -21,9 +21,8 @@ def main():
     #interpreter = edgetpu.make_interpreter(model_file)
     interpreter.allocate_tensors()
 
-    # Resize the image
-   # size, height = common.input_size(interpreter)
-    image = Image.open(image_file)
+    # Get Audio 15600 frames float32[15600] - Input audio clip to be classified (16 kHz float32 waveform samples in range -1.0..1.0).
+    image = [0] * 15600
 
     # Run an inference
     common.set_input(interpreter, image)
