@@ -9,7 +9,7 @@ from PIL import Image
 # Specify the TensorFlow model, labels, and image
 script_dir = pathlib.Path(__file__).parent.absolute()
 model_file = os.path.join(script_dir, 'coral.tflite')
-label_file = os.path.join(script_dir, 'AudioLabels.txt')
+label_file = os.path.join(script_dir, '../AudioLabels.txt')
 image_file = os.path.join(script_dir, 'test.png')
 
 # Initialize the TF interpreter

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fdf68b86-531e-4892-9a3f-17eb0c47da2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Old/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/.idea/usb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/Yamnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/audio_recorder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/config/commands_v2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/config/commands_v2_snake.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/config/labels_gc2.raw.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/hearing_snake_metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/install_requirements.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/media/startscreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/mel_features.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/models/voice_commands_v0.7_edgetpu.tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/models/voice_commands_v0.8_edgetpu.tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/pygame_images/apple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/pygame_images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/pygame_images/snake_head_with_ears.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/pygame_images/snake_tail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/run_hearing_snake.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/run_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/run_snake.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/run_yt_voice_control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio/run_yt_voice_control.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/audio_recorder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/config/Labels.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/coral-model_yamnet_classification_coral_1.tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/119.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/131.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/backprop_last_layer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/classify_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/detect_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/imprinting_learning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/install_requirements.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/labels.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/model_CNN.tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/model_pipelining_classify_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/semantic_segmentation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/small_object_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/image/two_models_inference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/imagenet_labels.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/metal00088.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/mobilenet_v2_1.0_224_quant_edgetpu (1).tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/own.tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/sirene.tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Old/wow.tflite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lite-model_yamnet_classification_tflite.tflite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/usb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yamnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Yamnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/audio_recorder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/config/commands_v2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/config/commands_v2_snake.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/config/labels_gc2.raw.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/hearing_snake_metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/install_requirements.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/media/startscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/mel_features.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/models/voice_commands_v0.7_edgetpu.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/models/voice_commands_v0.8_edgetpu.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/pygame_images/apple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/pygame_images/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/pygame_images/snake_head_with_ears.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/pygame_images/snake_tail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/run_hearing_snake.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/run_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/run_snake.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/run_yt_voice_control.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/run_yt_voice_control.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_recorder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/backprop_last_layer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/classify_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/detect_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/imprinting_learning.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/install_requirements.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/model_CNN.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/model_pipelining_classify_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/semantic_segmentation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/small_object_detection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/two_models_inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenet_labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metal00088.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobilenet_v2_1.0_224_quant_edgetpu (1).tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/own.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirene.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wow.tflite" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1uZtXl0ODsv4wXcYP4Q1GqXdXl9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jesper\OneDrive - warningsystems.dk\Skrivebord\usb" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.yamnet">
+    <configuration name="Yamnet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="usb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Yamnet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="usb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yamnet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="usb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yamnet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.yamnet" />
+        <item itemvalue="Python.runner" />
+        <item itemvalue="Python.Yamnet" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fdf68b86-531e-4892-9a3f-17eb0c47da2f" name="Default Changelist" comment="" />
+      <created>1624884980602</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624884980602</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
