@@ -1,4 +1,5 @@
 import os
+import numpy
 import pathlib
 from pycoral.utils import edgetpu
 from pycoral.utils import dataset
@@ -22,7 +23,7 @@ def main():
     interpreter.allocate_tensors()
 
     # Get Audio 15600 frames float32[15600] - Input audio clip to be classified (16 kHz float32 waveform samples in range -1.0..1.0).
-    image = (0,) * 15600
+    image = (numpy.float32(0),) * 15600
 
     # Run an inference
     common.set_input(interpreter, image)
