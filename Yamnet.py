@@ -12,7 +12,7 @@ def main():
 
     # Specify the TensorFlow model, labels, and image
     script_dir = pathlib.Path(__file__).parent.absolute()
-    model_file = os.path.join(script_dir, 'lite-model_yamnet_classification_tflite.tflite')
+    model_file = os.path.join(script_dir, 'lite-model_yamnet_classification_tflite1.tflite')
     label_file = os.path.join(script_dir, 'AudioLabels.txt')
     image_file = os.path.join(script_dir, 'test1.png')
 
