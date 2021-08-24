@@ -26,6 +26,7 @@ def main():
     print(image.shape)  # Should print (15600,)
 
     print(interpreter.resize_tensor_input(interpreter, [15600], strict=True))
+    
     #print(common.input_tensor(interpreter))
 
     # Run an inference
