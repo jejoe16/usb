@@ -11,9 +11,9 @@ import pyaudio
 def main():
 
     CHUNK = 1300
-    FORMAT = pyaudio.paInt16
+    FORMAT = pyaudio.paInt32
     CHANNELS = 1
-    RATE = 16000
+    RATE = 32000
 
     p = pyaudio.PyAudio()
 
@@ -28,6 +28,11 @@ def main():
     for i in range(12):
         data = stream.read(CHUNK)
         np.append(frames, data)
+
+    # Output as a WAV file
+    import scipy.io.wavfile as wav
+    wav.write('out.wav', RATE, frames)
+
 
     print(frames.size)
     print(frames)
