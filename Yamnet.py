@@ -18,22 +18,20 @@ def main():
 
     # Initialize the TF interpreter
     interpreter = tflite.Interpreter(model_file, experimental_delegates=[tflite.load_delegate('libedgetpu.so.1')])
-    #interpreter = edgetpu.make_interpreter(model_file)
-    interpreter.allocate_tensors()
 
     # Get Audio 15600 frames float32[15600] - Input audio clip to be classified (16 kHz float32 waveform samples in range -1.0..1.0).
-    image = np.zeros(int(round(0.975 * 16000)), dtype=np.int32)
+    image = np.zeros(15600, dtype=np.float32)
     print(image.shape)  # Should print (15600,)
+
+    interpreter.resize_tensor_input(0, [15600], strict=True)
+    interpreter.allocate_tensors()
 
     input_details = interpreter.get_input_details()
     print(input_details)
 
-    #print(interpreter.resize_tensor_input(interpreter, [15600], strict=True))
-
-    #print(common.input_tensor(interpreter))
-
+    interpreter.set_tensor(0, image)
     # Run an inference
-    common.set_input(interpreter, image)
+    #common.set_input(interpreter, image)
     interpreter.invoke()
     classes = classify.get_classes(interpreter, top_k=1)
 

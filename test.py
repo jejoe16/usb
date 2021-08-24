@@ -14,10 +14,10 @@ scores_output_index = output_details[0]['index']
 print(output_details)
 
 # Input: 0.975 seconds of silence as mono 16 kHz waveform samples.
-waveform = np.zeros(int(round(0.975 * 16000)), dtype=np.float32)
+waveform = np.zeros(15600, dtype=np.float32)
 print(waveform.shape)  # Should print (15600,)
 
-interpreter.resize_tensor_input(waveform_input_index, [waveform.size], strict=True)
+interpreter.resize_tensor_input(0, [15600], strict=True)
 interpreter.allocate_tensors()
 interpreter.set_tensor(waveform_input_index, waveform)
 interpreter.invoke()
