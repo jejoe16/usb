@@ -18,6 +18,9 @@ def main():
 
     p = pyaudio.PyAudio()
 
+    defaultCapability = p.get_default_host_api_info()
+    print(defaultCapability)
+
     stream = p.open(format=FORMAT,
                     channels=CHANNELS,
                     rate=RATE,
