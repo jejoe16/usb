@@ -25,8 +25,11 @@ def main():
     image = np.zeros(int(round(0.975 * 16000)), dtype=np.float32)
     print(image.shape)  # Should print (15600,)
 
-    print(interpreter.resize_tensor_input(interpreter, [15600], strict=True))
-    
+    input_details = interpreter.get_input_details()
+    print(input_details)
+
+    #print(interpreter.resize_tensor_input(interpreter, [15600], strict=True))
+
     #print(common.input_tensor(interpreter))
 
     # Run an inference
