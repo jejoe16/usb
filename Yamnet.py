@@ -40,13 +40,11 @@ def main():
     resampled_data = resampler.process(data, 0.5)
     print('{} -> {}'.format(len(data), len(resampled_data)))
 
-
-
-
     frames = np.empty(15600, dtype=np.float32)
+    np.append(frames, resampled_data)
 
-    data = stream.read(CHUNK, exception_on_overflow=False)
-    np.append(frames, data)
+    #data = stream.read(CHUNK, exception_on_overflow=False)
+    #np.append(frames, data)
 
     # Output as a WAV file
     import scipy.io.wavfile as wav
