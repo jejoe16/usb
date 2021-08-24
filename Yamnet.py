@@ -1,5 +1,5 @@
 import os
-import numpy
+import numpy as np
 import pathlib
 from pycoral.utils import dataset
 from pycoral.adapters import common
@@ -22,7 +22,8 @@ def main():
     interpreter.allocate_tensors()
 
     # Get Audio 15600 frames float32[15600] - Input audio clip to be classified (16 kHz float32 waveform samples in range -1.0..1.0).
-    image = (numpy.float32(0),) * 15600
+    image = np.array([0,] * 15600, dtype='f')
+
 
     # Run an inference
     common.set_input(interpreter, image)
