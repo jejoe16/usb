@@ -22,7 +22,8 @@ def main():
     interpreter.allocate_tensors()
 
     # Get Audio 15600 frames float32[15600] - Input audio clip to be classified (16 kHz float32 waveform samples in range -1.0..1.0).
-    image = np.array([0,] * 15600, dtype='f')
+    image = np.zeros(int(round(0.975 * 16000)), dtype=np.float32)
+    print(image.shape)  # Should print (15600,)
 
 
     # Run an inference
