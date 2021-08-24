@@ -7,14 +7,14 @@ from pycoral.adapters import classify
 from PIL import Image
 import tflite_runtime.interpreter as tflite
 import pyaudio
+import samplerate as sr
 
 def main():
 
-    CHUNK = 1024
-    RECORD_SECONDS = 5
+    CHUNK = 31200
     FORMAT = pyaudio.paInt32
     CHANNELS = 1
-    RATE = 16000
+    RATE = 32000
 
     p = pyaudio.PyAudio()
 
@@ -33,11 +33,20 @@ def main():
                     frames_per_buffer=CHUNK,
                     input_device_index=0)
 
+    resampler = sr.Resampler()
+
+    raw_data = stream.read(CHUNK)
+    data = np.fromstring(raw_data, dtype=np.int32)
+    resampled_data = resampler.process(data, 2)
+    print('{} -> {}'.format(len(data), len(resampled_data)))
+
+
+
+
     frames = np.empty(15600, dtype=np.float32)
 
-    for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
-        data = stream.read(CHUNK,exception_on_overflow = False)
-        np.append(frames, data)
+    data = stream.read(CHUNK, exception_on_overflow=False)
+    np.append(frames, data)
 
     # Output as a WAV file
     import scipy.io.wavfile as wav
