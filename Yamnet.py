@@ -10,7 +10,8 @@ import pyaudio
 
 def main():
 
-    CHUNK = 1300
+    CHUNK = 1024
+    RECORD_SECONDS = 5
     FORMAT = pyaudio.paInt32
     CHANNELS = 1
     RATE = 16000
@@ -26,7 +27,7 @@ def main():
 
     frames = np.empty(15600, dtype=np.float32)
 
-    for i in range(12):
+    for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
         data = stream.read(CHUNK,exception_on_overflow = False)
         np.append(frames, data)
 
