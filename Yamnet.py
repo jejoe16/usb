@@ -25,8 +25,9 @@ def main():
     image = np.zeros(int(round(0.975 * 16000)), dtype=np.float32)
     print(image.shape)  # Should print (15600,)
 
-    print(common.input_size(interpreter))
-    print(common.input_tensor(interpreter))
+    print(common.input_details(interpreter, 0))
+    #print(common.input_size(interpreter))
+    #print(common.input_tensor(interpreter))
 
     # Run an inference
     common.set_input(interpreter, image)
