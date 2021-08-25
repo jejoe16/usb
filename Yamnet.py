@@ -11,7 +11,7 @@ import samplerate as sr
 
 def main():
 
-    CHUNK = 31200*5
+    CHUNK = 31200
     FORMAT = pyaudio.paInt32
     CHANNELS = 1
     RATE = 32000
@@ -37,7 +37,7 @@ def main():
 
     raw_data = stream.read(CHUNK)
     data = np.fromstring(raw_data, dtype=np.int32)
-    resampled_data = resampler.process(data, 0.1)
+    resampled_data = resampler.process(data, 0.512)
     print('{} -> {}'.format(len(data), len(resampled_data)))
 
     # Output as a WAV file
