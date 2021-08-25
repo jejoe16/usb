@@ -46,6 +46,7 @@ def main():
 
     frames = np.empty(15600, dtype=np.float32)
     np.append(frames, resampled_data)
+    print(frames.size)
 
     #data = stream.read(CHUNK, exception_on_overflow=False)
     #np.append(frames, data)
