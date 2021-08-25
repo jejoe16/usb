@@ -12,7 +12,7 @@ import samplerate as sr
 def main():
 
     CHUNK = 31200
-    FORMAT = pyaudio.paInt16
+    FORMAT = pyaudio.paInt32
     CHANNELS = 1
     RATE = 32000
 
@@ -42,7 +42,7 @@ def main():
 
     # Output as a WAV file
     import scipy.io.wavfile as wav
-    wav.write('out.wav', RATE, resampled_data)
+    wav.write('out.wav', 16000, resampled_data)
 
     frames = np.empty(15600, dtype=np.float32)
     np.append(frames, resampled_data)
