@@ -12,7 +12,7 @@ import samplerate as sr
 def main():
 
     CHUNK = 31200
-    FORMAT = pyaudio.paInt32
+    FORMAT = pyaudio.paInt16
     CHANNELS = 1
     RATE = 32000
 
