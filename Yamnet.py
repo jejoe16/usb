@@ -37,7 +37,7 @@ def main():
 
     raw_data = stream.read(CHUNK)
     data = np.fromstring(raw_data, dtype=np.int32)
-    resampled_data = resampler.process(data, 0.5)
+    resampled_data = resampler.process(data, 0.1)
     print('{} -> {}'.format(len(data), len(resampled_data)))
 
     # Output as a WAV file
