@@ -48,6 +48,8 @@ def main():
     np.append(frames, resampled_data)
     print(frames.size)
 
+    frames = 2. * (frames - np.min(frames)) / np.ptp(frames) - 1
+
     #data = stream.read(CHUNK, exception_on_overflow=False)
     #np.append(frames, data)
 
